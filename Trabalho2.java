@@ -101,7 +101,7 @@ public class Trabalho2 {
         }
 
     }
-       public static  lerArquivo() {
+       public static String lerArquivo() {
            String retorno = "";
 			FileReader fileReader = null;
 			BufferedReader arquivo = null;
@@ -115,9 +115,9 @@ public class Trabalho2 {
 
                 String vet[] = leitura.split(";");
 
-                for (int t = 0; t < tam; t++) {
+                for (String v : vet) {
 
-                    retorno += vet[t]+ " ";
+                    retorno += v + " ";
                 }
                 
                 retorno += "\n";
@@ -144,15 +144,15 @@ public class Trabalho2 {
     public static void main(String[] args) { 
         int op;
         do { 
-            op = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma opção: \n"
-                    + "1)Criar Conta \n"
-                    + "2)Depositar \n"
-                    + "3)Sacar \n"
-                    + "4)Transferência \n"
-                    + "5)Saldo \n"
-                    + "6)Gravar usuário \n"
-                    + "7)Ler usuário \n"
-                    + "8)Sair"));
+            op = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma opcao: \n"
+                    + "1) Criar Conta \n"
+                    + "2) Depositar \n"
+                    + "3) Sacar \n"
+                    + "4) Transferencia \n"
+                    + "5) Saldo \n"
+                    + "6) Gravar usuario \n"
+                    + "7) Ler usuario \n"
+                    + "8) Sair"));
             if(op == 1){
                 String nome = JOptionPane.showInputDialog("Insira o nome do Titular");
                 int num;
